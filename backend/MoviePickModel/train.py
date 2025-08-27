@@ -5,7 +5,7 @@ import urllib.parse
 import re
 import numpy as np
 import pandas as pd
-from feature import build_feature_space 
+from .feature import build_feature_space 
 
 #Movie Recommender
 
