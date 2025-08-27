@@ -207,7 +207,7 @@ rec = MovieRecommender().fit(df)
 
 #Loading
 # Load later
-bundle = joblib.load("movie_recommender_latest.joblib")
+qwerty = joblib.load("movie_recommender_latest.joblib")
 rec_loaded = MovieRecommender()
 rec_loaded.df = bundle["df"]
 rec_loaded.X = bundle["X"]
