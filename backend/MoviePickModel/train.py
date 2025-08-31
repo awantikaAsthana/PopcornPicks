@@ -135,9 +135,9 @@ class MovieRecommender:
       rec_df["score"] = [sc for *_, sc in scored]
 
       # IMDb search URL
-      def imdb_search_url(title, year):
-          q = title if pd.isna(year) else f"{title} ({int(year)})"
-          return "https://www.imdb.com/find/?q=" + urllib.parse.quote(q)
-      rec_df["imdb_search"] = rec_df.apply(lambda r: imdb_search_url(r["title_clean"], r["year"]), axis=1)
+      rec_df.head()
+      def imdb_search_url(title):
+          return "https://www.imdb.com/find/?q=" + title
+      rec_df["imdb_search"] = imdb_search_url(rec_df["title"])
 
       return rec_df[["movieId","title","year","genres","tags","rating","similarity","score","imdb_search"]].reset_index(drop=True)

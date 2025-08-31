@@ -29,4 +29,4 @@ rec_loaded._title_to_idx = {}
 for i, t in enumerate(rec_loaded.df["title_clean"].str.lower()):
     rec_loaded._title_to_idx.setdefault(t, []).append(i)
 # #Example usage
-# print(rec_loaded.recommend(["scarface"], k=5, min_rating=3.0))
+# print(rec_loaded.recommend(["fight club"], k=5, min_rating=3.0))
