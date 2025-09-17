@@ -11,7 +11,9 @@ import joblib
 import re
 
 
+
 df = pd.read_csv("merged_final.csv")
+
 
 
 #Build Feature
@@ -218,7 +220,7 @@ class MovieRecommender:
 
 
 
-bundle = joblib.load("movie_recommender_latest.joblib")
-rec_loaded = MovieRecommender().load(bundle)
+#bundle = joblib.load("movie_recommender_latest.joblib")
+#rec_loaded = MovieRecommender().load(bundle)
 
-print(rec_loaded.recommend(["scarface"], k=5, min_rating=3.0))
+#print(rec_loaded.recommend(["scarface"], k=5, min_rating=3.0))
